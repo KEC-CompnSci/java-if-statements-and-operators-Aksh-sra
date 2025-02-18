@@ -11,6 +11,10 @@ public class Assignment {
     public static double calculateMovieNight() {
         // TODO: Implement this method
         return 0.0;
+
+        //calculate total cost
+        double totalCost = (2 * adultTicket cost) + (3 * childTicketCost) + popcornCost;
+        return totalCost; 
     }
 
     /**
@@ -22,6 +26,9 @@ public class Assignment {
     public static boolean canRentCar(int age) {
         // TODO: Implement this method
         return false;
+
+         public static boolean canRentCar(int age) {
+        return age >= 25;
     }
 
     /**
@@ -33,6 +40,9 @@ public class Assignment {
     public static boolean isValidPasswordLength(String password) {
         // TODO: Implement this method
         return false;
+
+         public static boolean isValidPasswordLength(String password) {
+        return password.length() >= 8;
     }
 
     /**
@@ -45,6 +55,9 @@ public class Assignment {
     public static boolean needsOilChange(int mileage, int lastChangeMileage) {
         // TODO: Implement this method
         return false;
+
+        public static boolean needsOilChange(int mileage, int lastChangeMileage) {
+        return (mileage - lastChangeMileage) >= 5000;
     }
 
     /**
@@ -55,6 +68,13 @@ public class Assignment {
     public static String getDivisibleByThreeMessage(int number) {
         // TODO: Implement this method
         return "";
+
+         public static String getDivisibleByThreeMessage(int number) {
+        if (number % 3 == 0) {
+            return "Divisible by 3";
+        } else {
+            return "";
+        }
     }
 
     /**
@@ -67,6 +87,13 @@ public class Assignment {
     public static String getLeapYearMessage(int year) {
         // TODO: Implement this method
         return "";
+
+         public static String getLeapYearMessage(int year) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            return "Leap Year";
+        } else {
+            return "Not Leap Year";
+        }
     }
 
     /**
@@ -78,5 +105,16 @@ public class Assignment {
     public static String getTicketPriceCategory(int age) {
         // TODO: Implement this method
         return "";
+
+         public static String getTicketPriceCategory(int age) {
+        if (age < 5) {
+            return "Free";
+        } else if (age >= 5 && age <= 12) {
+            return "Child Price";
+        } else if (age >= 13 && age <= 21) {
+            return "Student Price";
+        } else {
+            return "Adult Price";
+        }
     }
 }
