@@ -11,6 +11,7 @@ public class Assignment {
     public static double calculateMovieNight() {
         // TODO: Implement this method
         return 0.0;
+        
 
         //calculate total cost
         double totalCost = (2 * adultTicket cost) + (3 * childTicketCost) + popcornCost;
