@@ -11,6 +11,17 @@ class AssignmentTest {
         double expected = 56.25; // (2 * 12.50) + (3 * 8.00) + 7.25
         assertEquals(expected, Assignment.calculateMovieNight(), 0.01,
             "Movie night total should be $56.25");
+
+            calculateMovieNight() { 
+                double ticketPriceAdult = 12.50; 
+                double ticketPriceChild = 8.00; 
+                double snackCost = 7.25; 
+
+                int adultTickets = 2; 
+                int childTickets = 3; 
+
+                return (adultTickets * ticketPriceAdult) + (childTickets * ticketPriceChild) + snackCost; 
+            }
     }
 
     @Test
@@ -19,6 +30,12 @@ class AssignmentTest {
         assertTrue(Assignment.canRentCar(30), "Age 30 should be able to rent a car");
         assertFalse(Assignment.canRentCar(24), "Age 24 should not be able to rent a car");
         assertFalse(Assignment.canRentCar(18), "Age 18 should not be able to rent a car");
+
+        public static boolean 
+    canRentCar(int age) {
+        return age >= 25;
+
+       }
     }
 
     @Test
@@ -29,6 +46,11 @@ class AssignmentTest {
             "Password of length 8 should be valid");
         assertFalse(Assignment.isValidPasswordLength("short"), 
             "Password of length 5 should not be valid");
+
+            public static booleanv
+        isValidPasswordLengths(String password) { 
+            retrun passwrod.length() >= 8; 
+        }
     }
 
     @Test
@@ -39,6 +61,12 @@ class AssignmentTest {
             "Should need oil change after 5000 miles");
         assertFalse(Assignment.needsOilChange(64000, 59999), 
             "Should not need oil change after 4001 miles");
+
+            public static boolean 
+            needsOilChange(int currentMileage, int lastOilChangeMileage) {
+                return (currentMileage - lastOilChangeMileage) >= 5000; 
+
+            }
     }
 
     @Test
@@ -53,6 +81,15 @@ class AssignmentTest {
             "Negative numbers not divisible by 3 should return empty string");
         assertEquals("Divisible by 3", Assignment.getDivisibleByThreeMessage(-9),
             "Negative numbers divisible by 3 should return message");
+
+            public static string
+        getDivisibleByThreeMessage(int number) {
+
+            return(number / 3 == 0) ? 
+
+"Divisible by 3" : ""; 
+
+        }
     }
 
     @Test
@@ -65,6 +102,24 @@ class AssignmentTest {
             "2000 should be a leap year (divisible by 400)");
         assertEquals("Not Leap Year", Assignment.getLeapYearMessage(2023),
             "2023 should not be a leap year");
+
+    }
+
+             public static string
+        getLeapYearMessage(int year) {
+            if (year / 400 == 0) {
+                return "Leap Year"; 
+            }else if (year / 100 == 0)
+
+        }
+
+    {
+        return "Not Leap Year" 
+    }else if (year / 4 ==0) {
+        return "Leap year";
+    }else {
+        return "Not Leap Year";
+
     }
 
     @Test
@@ -81,5 +136,17 @@ class AssignmentTest {
             "Age 21 should be student price");
         assertEquals("Adult Price", Assignment.getTicketPriceCategory(22),
             "Age 22 should be adult price");
+
+
+    public static String getTicketPriceCategory(int age) {
+        if (age <= 4) {
+            return "Free";
+        } else if (age <= 12) {
+            return "Child Price";
+        } else if (age <= 21) {
+            return "Student Price";
+        } else {
+            return "Adult Price";
+        }
     }
 }
