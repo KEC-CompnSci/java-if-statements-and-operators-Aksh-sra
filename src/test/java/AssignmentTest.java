@@ -138,6 +138,7 @@ class AssignmentTest {
             "Age 22 should be adult price");
 
 
+
     public static String getTicketPriceCategory(int age) {
         if (age <= 4) {
             return "Free";
