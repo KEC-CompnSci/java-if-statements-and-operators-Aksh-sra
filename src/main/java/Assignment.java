@@ -1,22 +1,23 @@
-package main.java;
 
 public class Assignment {
-    /**
+    public static void main(String[] args) {
+    }
+     /* * 
      * Exercise 1: Calculate movie ticket total
      * Calculate the total cost for a family going to the movies:
      * - Adult tickets cost $12.50 each (2 adults)
      * - Child tickets cost $8.00 each (3 children)
      * - Large popcorn costs $7.25 (1 popcorn to share)
      */
-    public static double calculateMovieNight() {
-        // TODO: Implement this method
-        return 0.0;
-        
+        double calculateMovieNight(){
+            double ticketPriceAdult = 12.50; 
+            double ticketPriceChild = 8.00; 
+            double snackCost = 7.25; 
 
-        //calculate total cost
-        double totalCost = (2 * adultTicket cost) + (3 * childTicketCost) + popcornCost;
-        return totalCost; 
-    }
+            int adultTickets = 2; 
+            int childTickets = 3;
+
+            return (adultTickets * ticketPriceAdult) + (childTickets * ticketPriceChild) + snackCost;}
 
     /**
      * Exercise 2a: Check if someone can rent a car
@@ -24,11 +25,7 @@ public class Assignment {
      * @param age the person's age
      * @return true if age is 25 or older, false otherwise
      */
-    public static boolean canRentCar(int age) {
-        // TODO: Implement this method
-        return false;
-
-         public static boolean canRentCar(int age) {
+        public static boolean canRentCar(int age) {
         return age >= 25;
     }
 
@@ -38,9 +35,7 @@ public class Assignment {
      * @param password the password to check
      * @return true if password length is 8 or more, false otherwise
      */
-    public static boolean isValidPasswordLength(String password) {
-        // TODO: Implement this method
-        return false;
+
 
          public static boolean isValidPasswordLength(String password) {
         return password.length() >= 8;
@@ -53,9 +48,7 @@ public class Assignment {
      * @param lastChangeMileage the mileage at last oil change
      * @return true if difference is 5000 or more, false otherwise
      */
-    public static boolean needsOilChange(int mileage, int lastChangeMileage) {
-        // TODO: Implement this method
-        return false;
+
 
         public static boolean needsOilChange(int mileage, int lastChangeMileage) {
         return (mileage - lastChangeMileage) >= 5000;
@@ -66,17 +59,16 @@ public class Assignment {
      * @param number the number to check
      * @return "Divisible by 3" if number is divisible by 3, "" otherwise
      */
-    public static String getDivisibleByThreeMessage(int number) {
-        // TODO: Implement this method
-        return "";
 
-         public static String getDivisibleByThreeMessage(int number) {
+
+     public static String getDivisibleByThreeMessage(int number) {
         if (number % 3 == 0) {
             return "Divisible by 3";
         } else {
             return "";
         }
     }
+
 
     /**
      * Exercise 4: Determine if a year is a leap year
@@ -85,9 +77,7 @@ public class Assignment {
      * Hint: a year is a leap year if it's divisible by 4, 
      * except if it's divisible by 100 but not by 400
      */
-    public static String getLeapYearMessage(int year) {
-        // TODO: Implement this method
-        return "";
+
 
          public static String getLeapYearMessage(int year) {
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
@@ -103,9 +93,7 @@ public class Assignment {
      * @return "Free" if age < 5, "Child Price" if age is 5-12, 
      *         "Student Price" if age is 13-21, "Adult Price" if age is 22+
      */
-    public static String getTicketPriceCategory(int age) {
-        // TODO: Implement this method
-        return "";
+
 
          public static String getTicketPriceCategory(int age) {
         if (age < 5) {
