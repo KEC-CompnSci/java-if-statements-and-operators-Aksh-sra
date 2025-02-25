@@ -9,7 +9,7 @@ public class Assignment {
      * - Child tickets cost $8.00 each (3 children)
      * - Large popcorn costs $7.25 (1 popcorn to share)
      */
-        double calculateMovieNight(){
+        public static double calculateMovieNight(){
             double ticketPriceAdult = 12.50; 
             double ticketPriceChild = 8.00; 
             double snackCost = 7.25; 

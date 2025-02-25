@@ -76,12 +76,12 @@ class AssignmentTest {
             "Negative numbers divisible by 3 should return message");}
 
             public static String getDivisibleByThreeMessage(int number) {
-            return(number / 3 == 0) ? 
-
-        "Divisible by 3" : ""; 
-
-        }
-
+                if (number % 3 == 0) {
+                    return "Divisible by 3";
+                } else {
+                    return "";
+                }
+            }
         
     @Test
     void testGetLeapYearMessage() {
